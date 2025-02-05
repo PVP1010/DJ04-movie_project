@@ -1,0 +1,42 @@
+.sidebar {
+    width: 250px; /* Явно задаем ширину */
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #212529;
+    z-index: 1000; /* Убедимся, что панель поверх контента */
+    overflow-y: auto; /* Добавляем скролл при необходимости */
+}
+
+main {
+    margin-left: 250px; /* Отступ равен ширине сайдбара */
+    padding: 20px;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    width: calc(100% - 250px); /* Корректная ширина с учетом панели */
+}
+
+.nav-link {
+    color: white !important;
+    transition: background 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #495057; /* Цвет при наведении */
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    main {
+        margin-left: 0;
+        width: 100%;
+    }
+}

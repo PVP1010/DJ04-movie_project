@@ -15,3 +15,9 @@ def add_film(request):
     else:
         form = FilmForm()
     return render(request, 'films/add.html', {'form': form})
+
+def about(request):
+    return render(request, 'films/about.html')
+
+def contact(request):
+    return render(request, 'films/contact.html')

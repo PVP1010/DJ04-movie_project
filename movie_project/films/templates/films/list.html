@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
+{% block title %}Список фильмов{% endblock %}
+
 {% block content %}
     <h1>Список фильмов</h1>
-    <a href="{% url 'add_film' %}" class="btn btn-primary mb-3">Добавить фильм</a>
     {% if films %}
         <div class="row">
             {% for film in films %}
